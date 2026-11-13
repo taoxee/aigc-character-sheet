@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIGC Character Sheet"
+  short_description: "先确认人脸，再接收服装参考或无输入，最终制作白底三视图与六表情角色设定表"
+  default_prompt: "使用 $aigc-character-sheet 为我制作 Character reference sheet：先生成基准人脸，等我认可后接收服装参考或无输入选择，最后生成白底写实三视图、六表情、服装细节与配色板，无文字无水印。"

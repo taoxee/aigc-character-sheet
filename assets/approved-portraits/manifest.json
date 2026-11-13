@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "scope": "Three approved still-image examples, not a controlled style comparison or video validation.",
+  "examples": [
+    {
+      "id": "natural-daily",
+      "title": "自然日常",
+      "synthetic": true,
+      "user_feedback": "效果不错，固化下来",
+      "approved_date": "2026-11-11",
+      "image": "assets/approved-portraits/natural-daily.png",
+      "sha256": "47d6f409c69018888d743bcc43a7c6f455e4455605abbb4f094a31217e745010",
+      "tool": "built-in image_gen",
+      "target_aspect": "4:5",
+      "actual_width": 1122,
+      "actual_height": 1402,
+      "use": "Style benchmark; use as identity anchor only if this exact person is selected.",
+      "review_notes": "短而较宽的轮廓、单眼皮、较宽鼻部与嘴部可见，妆感克制、微露上牙；下颌转折比设计更柔和。"
+    },
+    {
+      "id": "soft-social",
+      "title": "日韩轻修图",
+      "synthetic": true,
+      "user_feedback": "效果不错，固化下来",
+      "approved_date": "2026-11-11",
+      "image": "assets/approved-portraits/soft-social.png",
+      "sha256": "ade4eee83e7c074dd0e94e2eafebe5947ba7ee8f02c4ca269ba9945a81cba22c",
+      "tool": "built-in image_gen",
+      "target_aspect": "4:5",
+      "actual_width": 1122,
+      "actual_height": 1402,
+      "use": "Style benchmark; use as identity anchor only if this exact person is selected.",
+      "review_notes": "轮廓收束、鼻部较小，肤质与妆容比自然款精致，唇釉与轻腮红可见；不把修图差异当作骨相差异。"
+    },
+    {
+      "id": "vintage",
+      "title": "复古",
+      "synthetic": true,
+      "user_feedback": "效果不错，固化下来",
+      "approved_date": "2026-11-11",
+      "image": "assets/approved-portraits/vintage.png",
+      "sha256": "b990271e946690bce09a541f43f8555d726aa4711625fad4ac174b5e42da9b1c",
+      "tool": "built-in image_gen",
+      "target_aspect": "4:5",
+      "actual_width": 1122,
+      "actual_height": 1402,
+      "use": "Style benchmark; use as identity anchor only if this exact person is selected.",
+      "review_notes": "脸部更长、鼻梁与颧部层次更明确，波浪发、红唇与暖调形成复古方向；眼睑褶皱比预定内双更明显，唇面比柔雾目标略润。"
+    }
+  ]
+}

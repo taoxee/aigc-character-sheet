@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "approved_date": "2026-11-11",
+  "user_feedback": "ok，把这个skill固定下来",
+  "identity_anchor": "character-base-v1.png",
+  "approved_sheet": "character-reference-sheet-v2-six-expressions.png",
+  "historical_edit_input": "character-reference-sheet-v1.png",
+  "expressions": [
+    "平静",
+    "浅笑",
+    "开心大笑",
+    "惊讶",
+    "轻微不满",
+    "难过"
+  ],
+  "expression_layout": "3 columns x 2 rows, left to right then top to bottom",
+  "added_design": [
+    "light blue long-sleeve sweater specification",
+    "ivory straight-leg jeans",
+    "off-white sneakers",
+    "unseen side/back/body design"
+  ],
+  "scope": "One approved fictional character sheet. New people must not inherit this person or wardrobe unless selected.",
+  "files": [
+    {
+      "file": "character-base-v1.png",
+      "sha256": "84493b5d47ab94ee6d7048ce72f80aeb444d545a7b1adaa38090abaca521162e",
+      "role": "identity anchor"
+    },
+    {
+      "file": "character-reference-sheet-v1.png",
+      "sha256": "a88feb925f311012db70bfc9624d67d4416b92d04fce29354e1a110938088617",
+      "role": "previous sheet, historical edit input"
+    },
+    {
+      "file": "character-reference-sheet-v2-six-expressions.png",
+      "sha256": "d02b2931e08b047000a1272f4faa2f6e1d9c54df0854ca04d605afc0c1739494",
+      "role": "user-approved six-expression reference sheet"
+    }
+  ],
+  "workflow_history_note": "Historical example predates explicit clothing-choice stage; outfit was completed by assistant and later accepted. Do not fabricate a separate none/provided choice for the old run.",
+  "final_product": "character-reference-sheet"
+}

@@ -1,0 +1,27 @@
+{
+  "synthetic": true,
+  "scope": "Three static fictional-character examples; not a biometric or video consistency benchmark.",
+  "examples": [
+    {
+      "id": "01-natural",
+      "title": "自然活力",
+      "face": "01-natural/face.png",
+      "sheet": "01-natural/character-sheet.png",
+      "record": "01-natural/character.json"
+    },
+    {
+      "id": "02-social",
+      "title": "日韩轻甜",
+      "face": "02-social/face.png",
+      "sheet": "02-social/character-sheet.png",
+      "record": "02-social/character.json"
+    },
+    {
+      "id": "03-vintage",
+      "title": "知性复古",
+      "face": "03-vintage/face.png",
+      "sheet": "03-vintage/character-sheet.png",
+      "record": "03-vintage/character.json"
+    }
+  ]
+}
