@@ -1,5 +1,7 @@
 # AIGC Character Sheet
 
+**Build distinctive, reusable characters for AI motion comics and virtual influencers (AI KOLs)—from a single face to a complete character sheet.**
+
 **English** | [简体中文](README.zh-CN.md)
 
 **Persona Blueprint · An AI skill that turns a portrait into a complete character reference sheet**
@@ -8,7 +10,7 @@
 [![Agent Skill](https://img.shields.io/badge/Agent-Skill-24292e.svg)](SKILL.md)
 [![Release](https://img.shields.io/github/v/release/taoxee/aigc-character-sheet)](https://github.com/taoxee/aigc-character-sheet/releases)
 
-**AIGC Character Sheet** is an open-source **AI character design skill** for Codex and **AI video pre-production**. Design a distinctive face, get the user's approval, choose an outfit, and create a realistic **character reference sheet** with **front, side, and back views, six facial expressions, outfit details, and a color palette**. It supports facial structure design, makeup adapted to each face, and styles ranging from natural daily portraits to lightly retouched Korean/Japanese-inspired social portraits and vintage looks.
+**AIGC Character Sheet** is an open-source **AI character design skill** for Codex, built for character development in **AI motion comics (manju / AI comic dramas)** and **AI KOL / virtual influencer production**. Design a distinctive face, get the user's approval, choose an outfit, and create a realistic **character reference sheet** with **front, side, and back views, six facial expressions, outfit details, and a color palette**. This visual foundation supports subsequent storyboarding, shot generation, and **AI video pre-production**. It supports facial structure design, makeup adapted to each face, and styles ranging from natural daily portraits to lightly retouched Korean/Japanese-inspired social portraits and vintage looks.
 
 [Quick Start](#quick-start) · [Workflow](#workflow) · [Examples](#examples) · [Commercial Use](#license-and-commercial-use)
 
@@ -127,6 +129,8 @@ Do not use the clothing model's face. Keep this character's identity and makeup.
 
 ## Use Cases
 
+- **AI motion comics / AI comic dramas:** Establish a recurring cast's faces, expressions, and outfits before storyboarding and shot generation. Use each character sheet as a shared visual reference across episodes.
+- **AI KOLs / virtual influencers:** Define a recognizable fictional digital creator for lifestyle posts, talking-head content, and brand storytelling, with identity and styling references for future content.
 - **AI video pre-production:** Prepare identity and outfit references for vlogs, talking-head videos, short films, and fictional digital characters.
 - **Character concept design:** Establish a specific character and hand off a visual specification to artists or subsequent generation steps.
 - **Consistent character styling:** Reference the selected face while adjusting makeup, style, or clothing, keeping retouching separate from structural changes.

@@ -1,5 +1,7 @@
 # AIGC Character Sheet
 
+**从一张脸开始，为你的漫剧和 AI KOL 打造有辨识度、可持续复用的角色。**
+
 [English](README.md) | **简体中文**
 
 **Persona Blueprint · 从人脸设计到完整角色设定表的 AI Skill**
@@ -8,7 +10,7 @@
 [![Agent Skill](https://img.shields.io/badge/Agent-Skill-24292e.svg)](SKILL.md)
 [![Release](https://img.shields.io/github/v/release/taoxee/aigc-character-sheet)](https://github.com/taoxee/aigc-character-sheet/releases)
 
-**AIGC Character Sheet** 是面向 AI 人物设计与 AIGC 视频前期制作的开源工作流：先设计具有辨识度的人脸，经过用户认可，再结合服装参考，制作包含**正面 / 侧面 / 背面三视图、六种面部表情、服装细节和配色板**的 Character Reference Sheet（角色设定表）。支持骨相差异、脸型与妆容适配，以及自然日常、日韩轻修图、复古等多种风格。
+**AIGC Character Sheet** 是服务于**漫剧 / AI 漫剧**和 **AI KOL / 虚拟网红**角色设计与制作的开源 AI Skill：先设计具有辨识度的人脸，经过用户认可，再结合服装参考，制作包含**正面 / 侧面 / 背面三视图、六种面部表情、服装细节和配色板**的 Character Reference Sheet（角色设定表），为后续分镜、镜头生成与 AIGC 视频制作提供统一人物参考。支持骨相差异、脸型与妆容适配，以及自然日常、日韩轻修图、复古等多种风格。
 
 [快速开始](#快速开始) · [工作流程](#工作流程从人脸到角色设定表) · [效果示例](#效果示例三种风格) · [商用许可](#开源与商用)
 
@@ -119,6 +121,8 @@ git clone https://github.com/taoxee/aigc-character-sheet.git ~/.agents/skills/ai
 
 ## 使用场景
 
+- **漫剧 / AI 漫剧**：在分镜与镜头生成前，确定主角、配角的人脸、表情与服装，使用角色设定表作为跨镜头、跨集数的共同视觉参考。
+- **AI KOL / 虚拟网红**：为生活记录、口播、社交内容和品牌叙事设计有辨识度的虚构数字人物，建立后续内容可引用的人物身份与造型依据。
 - **AIGC 视频前期设计 / AI video pre-production**：为生活记录、日常口播、短片与虚构数字人物准备身份和服装参考。
 - **角色概念设计 / Character concept design**：先确定一位具体人物，再向美术或后续生成环节交接视觉设定。
 - **同人物换妆与造型 / Consistent character styling**：以选中人脸为参考，调整妆容、风格或服装，避免把修图当作改骨相。
