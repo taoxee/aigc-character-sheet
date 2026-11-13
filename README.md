@@ -82,7 +82,29 @@ This Agent Skill packages `SKILL.md`, prompts, design rules, and examples. It re
 
 The README is available separately in English and Chinese. Skill instructions, supporting references, and saved execution records are currently primarily in Chinese. You can request English prompts and responses when using the skill.
 
-### Install in Codex
+### Install with npx (Recommended)
+
+Use the [Vercel Skills CLI](https://github.com/vercel-labs/skills) to install directly from GitHub. Run this in your project and choose your agent interactively:
+
+```bash
+npx skills add taoxee/aigc-character-sheet
+```
+
+For a Codex project installation:
+
+```bash
+npx skills add taoxee/aigc-character-sheet --skill aigc-character-sheet --agent codex
+```
+
+For a global Codex installation, add `--global`:
+
+```bash
+npx skills add taoxee/aigc-character-sheet --skill aigc-character-sheet --agent codex --global
+```
+
+Requires Node.js, npm (`npx`), and Git. Installation was verified with `skills@1.8.1` and Node.js `22.22.3`; that CLI release requires Node.js `>=22.20.0`. The CLI also supports other agents; only the Codex project installation has been tested for this skill. Image generation still requires an available image tool.
+
+### Other Codex Installation Methods
 
 Ask Codex:
 

@@ -80,7 +80,29 @@ flowchart LR
 
 这是包含 `SKILL.md`、提示词、设计规则与示例的 Agent Skill，不是独立的在线生图服务。需要能读取 skill 的助手环境；实际出图还需要可用的图像生成 / 编辑工具。缺少图像工具时，可以输出完整提示词与设计方案。
 
-### 在 Codex 中安装
+### 使用 npx 安装（推荐）
+
+通过 [Vercel Skills CLI](https://github.com/vercel-labs/skills) 直接从 GitHub 安装。在项目目录运行下面的命令，交互选择使用的助手：
+
+```bash
+npx skills add taoxee/aigc-character-sheet
+```
+
+安装到 Codex 当前项目：
+
+```bash
+npx skills add taoxee/aigc-character-sheet --skill aigc-character-sheet --agent codex
+```
+
+全局安装到 Codex，增加 `--global`：
+
+```bash
+npx skills add taoxee/aigc-character-sheet --skill aigc-character-sheet --agent codex --global
+```
+
+需要 Node.js、npm（提供 `npx`）和 Git。本项目使用 `skills@1.8.1` 与 Node.js `22.22.3` 实测安装成功；该版本安装器要求 Node.js `>=22.20.0`。安装器也支持其他助手，本 skill 目前只实测了 Codex 项目级安装。实际出图仍需要可用的图像工具。
+
+### Codex 的其他安装方式
 
 可以直接在 Codex 中请求：
 
