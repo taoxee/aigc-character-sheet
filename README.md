@@ -1,192 +1,189 @@
 # AIGC Character Sheet
 
-**Persona Blueprint · 从人脸设计到完整角色设定表的 AI Skill**
+**English** | [简体中文](README.zh-CN.md)
+
+**Persona Blueprint · An AI skill that turns a portrait into a complete character reference sheet**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Agent Skill](https://img.shields.io/badge/Agent-Skill-24292e.svg)](SKILL.md)
 [![Release](https://img.shields.io/github/v/release/taoxee/aigc-character-sheet)](https://github.com/taoxee/aigc-character-sheet/releases)
 
-**AIGC Character Sheet** 是面向 AI 人物设计与 AIGC 视频前期制作的开源工作流：先设计具有辨识度的人脸，经过用户认可，再结合服装参考，制作包含**正面 / 侧面 / 背面三视图、六种面部表情、服装细节和配色板**的 Character Reference Sheet（角色设定表）。支持骨相差异、脸型与妆容适配，以及自然日常、日韩轻修图、复古等多种风格。
+**AIGC Character Sheet** is an open-source **AI character design skill** for Codex and **AI video pre-production**. Design a distinctive face, get the user's approval, choose an outfit, and create a realistic **character reference sheet** with **front, side, and back views, six facial expressions, outfit details, and a color palette**. It supports facial structure design, makeup adapted to each face, and styles ranging from natural daily portraits to lightly retouched Korean/Japanese-inspired social portraits and vintage looks.
 
-An open-source **AI character design skill** for Codex. Build a **Persona Blueprint** from a portrait, approve the face, choose clothing, and create a realistic **character reference sheet** with a three-view character turnaround, six facial expressions, outfit details, and a color palette. Designed for consistent character design and visual preparation for AI video production.
-
-[快速开始](#quick-start--快速开始) · [工作流程](#workflow--从人脸到角色设定表) · [效果示例](#examples--三种风格的实际效果) · [商用许可](#license--开源与商用)
+[Quick Start](#quick-start) · [Workflow](#workflow) · [Examples](#examples) · [Commercial Use](#license-and-commercial-use)
 
 ![AIGC Character Sheet example: natural daily fictional adult character, front side back turnaround, six facial expressions, outfit details and color palette](examples/01-natural/character-sheet.png)
 
-## Persona Blueprint 是什么？
+## What Is a Persona Blueprint?
 
-在这个项目中，**Persona Blueprint** 指一份可以持续引用的人物视觉蓝图：人脸基准、骨相与五官特征、妆容设计、统一服装，以及最终角色设定表。它帮助后续创作保留具体人物的特征，也让美术、提示词和图像参考有共同依据。
+A **Persona Blueprint** is a reusable visual specification for one character: an identity portrait, facial structure and features, makeup, a consistent outfit, and a final character reference sheet. It gives artists, prompts, and subsequent image generation a shared reference for the character's appearance.
 
-核心交付是一位完整人物的 **Character Sheet / Model Sheet**。单个人物就能完成整个流程；批量生成是可选扩展，日韩可爱风也只是可选风格。
+The core deliverable is a complete **Character Sheet / Model Sheet** for a single character. Batch generation is optional, and a cute Korean/Japanese-inspired look is one available style.
 
-## Workflow · 从人脸到角色设定表
+## Workflow
 
 ```mermaid
 flowchart LR
-    A[设计并生成人脸] --> B{用户认可这张脸？}
-    B -->|需要修改| A
-    B -->|认可| C[上传服装参考 / 明确无输入或自行搭配]
-    C --> D[以该人脸为身份参考]
-    D --> E[最终 Character Reference Sheet]
+    A[Design and generate a face] --> B{User approves this face?}
+    B -->|Revise| A
+    B -->|Approve| C[Upload outfit reference or explicitly delegate styling]
+    C --> D[Use the selected portrait as identity reference]
+    D --> E[Final Character Reference Sheet]
 ```
 
-1. **Face Design / 人脸设计**：从气质与用途出发，分别确定骨相、软组织、眉眼鼻唇和妆容，生成清晰的人脸基准图。
-2. **Face Approval / 人脸认可**：用户认可具体成图后再进入下一步；需要调整时先修改人脸。
-3. **Outfit Reference / 服装参考**：上传服装图片，或明确说“无输入 / 你搭配”。没有上传附件不会自动被视为放弃服装选择。
-4. **Character Reference Sheet / 最终设定表**：使用已选人脸作为真实图像参考，统一三视图、六表情、服装细节与配色。交付设定表及可复用记录后，标准流程结束。
+1. **Face design:** Translate the desired personality and use case into facial structure, soft tissue, features, and makeup. Generate a clear identity portrait.
+2. **Face approval:** Wait for approval of the actual image. If the user requests changes, revise the portrait before proceeding.
+3. **Outfit reference:** Accept clothing images or an explicit instruction such as “no outfit reference” or “choose the outfit for me.” A missing attachment alone does not settle this choice.
+4. **Final character reference sheet:** Use the selected portrait as an actual image input. Create consistent three-view full-body images, six expressions, clothing details, and a palette. Deliver the sheet and reusable records to complete the standard workflow.
 
-服装参考图中即使有人，也只取服装信息，不把参考者的人脸混入角色。用户可明确委托助手代选；记录必须反映实际授权，不能把代选写成用户逐张认可。
+When an outfit reference includes a person, use the clothing information without importing that person's face. Users may explicitly delegate selection; execution records must distinguish delegated choices from individual user approvals.
 
-## Features · 人物设计能力
+## Features
 
-| 能力 | 具体做法 |
+| Capability | Approach |
 | --- | --- |
-| **Facial structure · 骨相设计** | 分开设计眉骨 / 眼窝、颧部、下颌 / 下巴和软组织，避免只靠发型或滤镜制造人物差异。 |
-| **Distinct faces · 不同脸检查** | 多人物设计逐对比较独立结构组；发色、痣、肤色和妆容不充当骨相差异。 |
-| **Makeup adaptation · 妆容适配** | 根据眼睑、眉眼距离、颧部和唇形安排眼影、眼线、腮红与唇妆；支持淡妆、日常妆与浓妆。 |
-| **Identity reference · 身份参考** | 已选人物的后续生成实际引用其图片，锁定五官、基础肤色、标记和发际线。 |
-| **Character turnaround · 人物三视图** | 正面、真实 90° 侧面、背面全身视图；服装结构、发型和身体比例保持相容。 |
-| **Expression sheet · 六表情** | 平静、浅笑、开心大笑、惊讶、轻微不满、难过，使用不同的面部肌肉变化。 |
-| **Outfit breakdown · 服装细节** | 展示领口、袖口、下摆、裤裙结构和鞋款等必要细节；有设备参考时再补充设备。 |
-| **Color palette · 配色板** | 提取头发、肤色、妆容和服装的视觉配色，便于后续制作参考。 |
-| **Clean photographic finish · 干净写实质感** | 控制灰褐斑驳、重复纹理、过强毛孔和噪声；修图强度与基础肤色分别处理。 |
+| **Facial structure design** | Design the brow and eye sockets, cheekbones, jaw and chin, and soft tissue separately. |
+| **Distinct faces** | Compare every pair of characters across independent structural groups. Hair color, beauty marks, skin tone, and makeup do not count as structural differences. |
+| **Makeup adaptation** | Place eyeshadow, eyeliner, blush, and lip makeup according to eyelids, brow-to-eye distance, cheeks, and lip shape. Supports subtle, everyday, and full makeup. |
+| **Identity reference** | Use the selected character's actual portrait to guide facial proportions, base skin tone, identifying marks, and hairline in subsequent images. |
+| **Character turnaround** | Show front, true 90-degree side, and back full-body views with compatible clothing construction, hairstyle, and body proportions. |
+| **Expression sheet** | Include neutral, a small smile, joyful laughter, surprise, mild annoyance, and sadness through distinct facial muscle changes. |
+| **Outfit breakdown** | Show relevant necklines, cuffs, hems, trouser or skirt construction, and footwear. Add equipment details when provided. |
+| **Color palette** | Collect visual swatches for hair, skin, makeup, and clothing as references for later production. |
+| **Clean photographic finish** | Control gray-brown mottling, repeated texture, excessive pores, and noise. Treat retouching strength separately from base skin tone. |
 
-默认成年虚构人物。人脸基准、正面和表情特写保持**正头、直视镜头**；侧面和背面保持真实朝向。最终图片默认**无可见文字、无手写署名、无标志、无水印**。生成结果仍需逐张检查。
+Characters are fictional adults by default. Identity portraits, front views, and expression close-ups use an **upright head and direct camera gaze**. Side and back views keep their true orientation. Final images default to **no visible text, handwritten signatures, logos, or watermarks**. Review each generated image against these requirements.
 
-## Examples · 三种风格的实际效果
+## Examples
 
-以下是三位独立成年虚构女性，分别展示自然日常、日韩轻修图和复古方向。每张设定表都以对应人脸图片作为身份输入；它们是不同人物，不是同一张脸的修图前后对比。
+These three independent fictional adult women demonstrate natural daily, soft social, and vintage styles. Each sheet used its own portrait as the identity input. They are different characters rather than before-and-after retouching comparisons of the same face.
 
-| 自然活力 · Natural Daily | 日韩轻甜 · Soft Social | 知性复古 · Vintage |
+| Natural Daily | Soft Social | Vintage |
 | --- | --- | --- |
 | ![Natural daily AI portrait with a broader soft jaw, slender eyes and subtle everyday makeup](examples/01-natural/face.png) | ![Korean Japanese inspired lightly retouched AI portrait with an oval heart face, open eyes and peach rose makeup](examples/02-social/face.png) | ![Vintage AI portrait with a longer face, defined cheek and nose structure, and brick rose lips](examples/03-vintage/face.png) |
-| 较宽的方圆轮廓、细长眼型；清爽日常妆。 | 短心形椭圆轮廓、开放眼型；桃粉妆与薄唇釉。 | 偏长脸、较明确颧鼻层次；适配复古唇妆。 |
-| [完整角色设定表](examples/01-natural/character-sheet.png) · [实际提示词与设计](examples/01-natural/character.json) | [完整角色设定表](examples/02-social/character-sheet.png) · [实际提示词与设计](examples/02-social/character.json) | [完整角色设定表](examples/03-vintage/character-sheet.png) · [实际提示词与设计](examples/03-vintage/character.json) |
+| Broader, softly squared face; slender eyes; restrained everyday makeup. | Short heart-oval face; open eyes; peach-rose makeup and a thin lip glaze. | Longer face; defined cheek and nose structure; adapted vintage lip makeup. |
+| [Full character sheet](examples/01-natural/character-sheet.png) · [Prompts and design record](examples/01-natural/character.json) | [Full character sheet](examples/02-social/character-sheet.png) · [Prompts and design record](examples/02-social/character.json) | [Full character sheet](examples/03-vintage/character-sheet.png) · [Prompts and design record](examples/03-vintage/character.json) |
 
-### 日韩轻修图 · Korean / Japanese Inspired Social Portrait
+### Korean/Japanese-Inspired Social Portrait
 
 ![Korean Japanese inspired character reference sheet, front side back views, six facial expressions, lavender knit top, ivory skirt and color palette](examples/02-social/character-sheet.png)
 
-### 复古风格 · Vintage Character Reference Sheet
+### Vintage Character Reference Sheet
 
 ![Vintage realistic character model sheet with navy blazer, front side back turnaround, six expressions, garment details and coordinated color swatches](examples/03-vintage/character-sheet.png)
 
-原始人脸为 1122 × 1402，设定表为 1774 × 887。样例由内置图像工具生成，并经静态目视检查；难过与不满等克制表情的辨识度仍需结合用途判断。未知侧背和身体是设计补全，不能视为正面照片证实的真实结构。完整 prompt、参考输入关系与校验摘要见 [示例说明](references/public-examples.md)。
+Original portraits are 1122 × 1402 pixels; sheets are 1774 × 887 pixels. Examples were generated with the built-in image tool and visually reviewed as still images. Restrained sadness and annoyance may need closer review for your intended use. Unseen side, back, and body details are design additions, not anatomy established by the frontal portrait. See the [example notes](references/public-examples.md) for execution records, reference inputs, and review scope.
 
-## Quick Start · 快速开始
+## Quick Start
 
-这是包含 `SKILL.md`、提示词、设计规则与示例的 Agent Skill，不是独立的在线生图服务。需要能读取 skill 的助手环境；实际出图还需要可用的图像生成 / 编辑工具。缺少图像工具时，可以输出完整提示词与设计方案。
+This Agent Skill packages `SKILL.md`, prompts, design rules, and examples. It requires an assistant environment that can read skills. Producing images also requires an available image generation or editing tool; without one, the workflow can provide complete prompts and design specifications.
 
-### 在 Codex 中安装
+The README is available separately in English and Chinese. Skill instructions, supporting references, and saved execution records are currently primarily in Chinese. You can request English prompts and responses when using the skill.
 
-可以直接在 Codex 中请求：
+### Install in Codex
+
+Ask Codex:
 
 ```text
-使用 $skill-installer 从 https://github.com/taoxee/aigc-character-sheet 安装这个 skill，名称为 aigc-character-sheet。
+Use $skill-installer to install the skill from
+https://github.com/taoxee/aigc-character-sheet
+with the name aigc-character-sheet.
 ```
 
-也可以手动克隆到个人 skills 目录：
+Or clone it into your personal skills directory:
 
 ```bash
 mkdir -p ~/.agents/skills
 git clone https://github.com/taoxee/aigc-character-sheet.git ~/.agents/skills/aigc-character-sheet
 ```
 
-项目内安装时，可将同一仓库克隆到 `.agents/skills/aigc-character-sheet`。Codex 会发现新 skill；若未显示，重启后再查看。目录与调用方式参考 [OpenAI 官方 Skills 文档](https://learn.chatgpt.com/docs/build-skills)。
+For a project-local installation, clone the same repository into `.agents/skills/aigc-character-sheet`. Codex discovers new skills automatically; restart if it does not appear. See the [official OpenAI skills documentation](https://learn.chatgpt.com/docs/build-skills) for discovery locations and invocation.
 
-### 第一次使用
-
-```text
-使用 $aigc-character-sheet，从零设计一位明亮活泼的成年虚构女性，
-用于生活记录视频。自然日常风，妆容按她的脸型适配。
-先生成正头、直视镜头的人脸，等我认可后再继续服装和最终角色设定表。
-```
-
-认可人脸后：
+### Create Your First Character
 
 ```text
-这张脸可以。服装无输入，请你搭配。
-继续生成白底 Character reference sheet：三视图、六表情、服装细节、配色板。
+Use $aigc-character-sheet to design an original fictional adult woman
+with a bright, lively personality for everyday vlog videos.
+Choose a natural daily style and adapt the makeup to her facial structure.
+First generate an upright, front-facing identity portrait with direct camera gaze.
+Wait for my approval before continuing to clothing and the final character sheet.
+Please write prompts and responses in English.
 ```
 
-上传服装时：
+After approving the face:
 
 ```text
-使用这张已认可的人脸，服装参考我上传的图片。
-只参考服装，不参考穿衣者的脸；保持人物身份和妆容。
+I approve this face. I have no outfit reference; please choose the clothing.
+Create the final white-background character reference sheet with front, side,
+and back views, six facial expressions, outfit details, and a color palette.
 ```
 
-English example:
+When uploading clothing:
 
 ```text
-Use $aigc-character-sheet to design an original fictional adult character.
-Start with a portrait and wait for my approval. Then ask for an outfit reference
-or permission to choose clothing. Finish with a realistic white-background
-character reference sheet: front, side, back, six facial expressions,
-outfit details, and a color palette. Keep frontal views upright with direct gaze;
-no visible text, signatures, logos, or watermarks.
+Use the approved portrait for identity and my uploaded image for clothing only.
+Do not use the clothing model's face. Keep this character's identity and makeup.
 ```
 
-## Use Cases · 使用场景
+## Use Cases
 
-- **AIGC 视频前期设计 / AI video pre-production**：为生活记录、日常口播、短片与虚构数字人物准备身份和服装参考。
-- **角色概念设计 / Character concept design**：先确定一位具体人物，再向美术或后续生成环节交接视觉设定。
-- **同人物换妆与造型 / Consistent character styling**：以选中人脸为参考，调整妆容、风格或服装，避免把修图当作改骨相。
-- **多人阵容 / Character cast planning**：需要时设计多个结构不同的人物；单人设计仍是完整任务。
+- **AI video pre-production:** Prepare identity and outfit references for vlogs, talking-head videos, short films, and fictional digital characters.
+- **Character concept design:** Establish a specific character and hand off a visual specification to artists or subsequent generation steps.
+- **Consistent character styling:** Reference the selected face while adjusting makeup, style, or clothing, keeping retouching separate from structural changes.
+- **Character cast planning:** Design multiple structurally distinct characters when needed. A single character remains a complete task.
 
-日韩网感、Instagram 风格的轻修图肖像、自然写实人像和复古人物设计都可作为方向。风格、妆容浓度、修图强度和基础肤色分别选择，不自动把所有人物变成同一类脸。
+Available directions include Instagram-style lightly retouched portraits, natural realistic photography, Korean/Japanese-inspired social looks, and vintage character design. Choose style, makeup intensity, retouching strength, and base skin tone separately.
 
-## FAQ · 常见问题
+## FAQ
 
-**这是 AI character generator 吗？**
+**Is this an AI character generator?**
 
-它是组织 AI 人物生成的工作流 skill，负责设计、提示词、参考图使用和检查。仓库不包含模型权重、训练数据集或独立生图 API。
+It is a workflow skill for organizing AI character generation: design, prompts, reference image use, and checks. The repository contains no model weights, training dataset, or standalone image generation API.
 
-**Character reference sheet、model sheet 和 expression sheet 有什么关系？**
+**How do character reference sheets, model sheets, and expression sheets relate?**
 
-本项目的角色设定表包含三视图（character turnaround）、六表情（expression sheet）、服装拆解和配色，是一份整合的视觉参考。它不直接输出可绑定的 3D 模型或动画资产。
+The final sheet combines a character turnaround, an expression sheet, outfit details, and a palette into one visual reference. It does not directly produce a rigged 3D model or animation assets.
 
-**能保证一直是同一个人吗？**
+**Does it guarantee the same identity in every image?**
 
-使用实际人脸参考有助于保持身份，但不能保证每次生成、所有角度或视频帧都完全一致。检查脚本验证的是已编码设计记录，不进行图像识别或生物特征认证；当前公开示例也没有验证视频时间一致性。
+Actual portrait references help preserve identity, but results can vary across generations, angles, and video frames. The checker validates encoded design records, not image similarity or biometric identity. The public examples do not establish temporal consistency in video.
 
-**只支持成年女性或可爱风吗？**
+**Is it limited to women or cute styles?**
 
-不是。公开示例选择了成年女性，工作流可根据请求设计其他成年虚构人物和风格。日韩轻修图与批量生成均为可选能力。
+No. The examples feature adult women, while the workflow can design other fictional adults and styles according to the request. Light Korean/Japanese-style retouching and batch generation are optional.
 
-**可以商用吗？**
+**Can I use it commercially?**
 
-本仓库按 MIT 许可发布，可商业使用、修改和分发，保留版权与许可声明即可。调用的图像服务及上传素材仍适用各自的条款和权利要求，详见下方许可说明。
+The repository is MIT licensed, allowing commercial use, modification, and redistribution with the copyright and license notices retained. Image services and reference materials remain subject to their own terms and applicable rights. See the license section below.
 
-## Repository · 文件说明
+## Repository
 
-| 路径 | 用途 |
+| Path | Purpose |
 | --- | --- |
-| [SKILL.md](SKILL.md) | 助手入口、工作流和关键生成约束。 |
-| [references/character-structure.md](references/character-structure.md) | 人物骨相与五官结构设计。 |
-| [references/makeup-adaptation.md](references/makeup-adaptation.md) | 根据人物结构适配妆容。 |
-| [references/character-sheet.md](references/character-sheet.md) | 三视图、六表情、细节与配色模板。 |
-| [references/workflow.md](references/workflow.md) | 人脸认可、服装选择和交付阶段记录。 |
-| [references/public-examples.md](references/public-examples.md) | 三套人脸与设定表、实际提示词及检查范围。 |
-| [scripts/check_design.py](scripts/check_design.py) | 只读检查设计记录、不同脸约束及阶段信息。 |
-| [scripts/plan_cast.py](scripts/plan_cast.py) | 可选多人规划器，不调用生图工具。 |
-| [tests/test_design.py](tests/test_design.py) | 设计合同与规划器回归检查。 |
+| [SKILL.md](SKILL.md) | Assistant entry point, workflow, and key generation constraints. |
+| [references/character-structure.md](references/character-structure.md) | Facial structure and feature design. |
+| [references/makeup-adaptation.md](references/makeup-adaptation.md) | Makeup placement adapted to the character's face. |
+| [references/character-sheet.md](references/character-sheet.md) | Three-view, six-expression, detail, and palette template. |
+| [references/workflow.md](references/workflow.md) | Face approval, clothing choice, and delivery-stage records. |
+| [references/public-examples.md](references/public-examples.md) | Three portrait/sheet pairs, execution prompts, and review scope. |
+| [scripts/check_design.py](scripts/check_design.py) | Read-only checks for encoded designs, distinct-face constraints, and workflow records. |
+| [scripts/plan_cast.py](scripts/plan_cast.py) | Optional cast planner; does not call image generation tools. |
+| [tests/test_design.py](tests/test_design.py) | Regression checks for design contracts and the planner. |
 
-运行已有检查，无第三方 Python 依赖：
+Run the existing checks without third-party Python dependencies:
 
 ```bash
 python3 -m unittest discover -s tests -p 'test_*.py'
 ```
 
-## License · 开源与商用
+## License and Commercial Use
 
-[MIT License](LICENSE)。许可范围包含本仓库的代码、提示词、文档，以及作者对自生成示例依法可以授予的权利；允许商业使用、修改、分发和再许可，须保留版权与许可声明。MIT 不构成对输出独占性、无侵权或任何特定用途适用性的保证。
+[MIT License](LICENSE). This covers the repository's code, prompts, documentation, and any rights the author can lawfully license in the self-generated examples. Commercial use, modification, distribution, and sublicensing are permitted with the copyright and license notices retained. MIT provides no guarantee of output exclusivity, non-infringement, or fitness for a particular purpose.
 
-实际生成图片时，仍需遵守所用图像模型 / 平台的服务条款，以及上传人脸、服装、品牌等参考素材的适用权利。仓库内的 AI 示例为虚构人物视觉设计，不是对第三方素材的授权。
+When generating images, follow the image model or platform's terms and the applicable rights in uploaded face, outfit, brand, or other reference materials. The AI examples depict fictional characters and do not grant rights to third-party materials.
 
-部分结构、检查器与改写案例融合自 [南鸢·人像角色设定师](https://github.com/nuyoah-ai-works/nuyoah-portrait-character-designer)，原 MIT 版权与许可完整保留。具体来源、改动范围与示例来源见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 和 [第三方 MIT 原文](licenses/nuyoah-MIT.txt)。文档归属声明不会作为图片中的署名。
+Parts of the design rules, checker, and adapted prompt examples incorporate work from [nuyoah Portrait Character Designer](https://github.com/nuyoah-ai-works/nuyoah-portrait-character-designer). Its original MIT copyright and license are retained. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the [third-party MIT license](licenses/nuyoah-MIT.txt) for attribution and scope. Attribution in documentation is not an instruction to add signatures to images.
 
-## Contributing · 反馈与改进
+## Contributing
 
-欢迎通过 [GitHub Issues](https://github.com/taoxee/aigc-character-sheet/issues) 提交人物一致性、妆容适配或版式问题。建议附上使用场景、提示词、允许变化项及实际结果；请勿提交密钥或未授权的私人素材。修改检查脚本时请运行上述回归检查，并明确区分文字设计目标与实际图像效果。
+Use [GitHub Issues](https://github.com/taoxee/aigc-character-sheet/issues) to report identity consistency, makeup adaptation, or layout problems. Include the use case, prompt, permitted changes, and actual result where possible. Do not submit secrets or unauthorized private materials. Run the regression checks when changing checker scripts, and distinguish design intentions from observed image results.
