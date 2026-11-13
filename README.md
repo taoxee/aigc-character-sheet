@@ -14,7 +14,7 @@
 
 [Quick Start](#quick-start) · [Workflow](#workflow) · [Examples](#examples) · [Commercial Use](#license-and-commercial-use)
 
-![AIGC Character Sheet example: natural daily fictional adult character, front side back turnaround, six facial expressions, outfit details and color palette](examples/01-natural/character-sheet.png)
+![Soft Social character reference sheet: Korean Japanese inspired fictional adult character, front side back turnaround, six facial expressions, outfit details and color palette](examples/02-social/character-sheet.png)
 
 ## What Is a Persona Blueprint?
 
@@ -66,9 +66,9 @@ These three independent fictional adult women demonstrate natural daily, soft so
 | Broader, softly squared face; slender eyes; restrained everyday makeup. | Short heart-oval face; open eyes; peach-rose makeup and a thin lip glaze. | Longer face; defined cheek and nose structure; adapted vintage lip makeup. |
 | [Full character sheet](examples/01-natural/character-sheet.png) · [Prompts and design record](examples/01-natural/character.json) | [Full character sheet](examples/02-social/character-sheet.png) · [Prompts and design record](examples/02-social/character.json) | [Full character sheet](examples/03-vintage/character-sheet.png) · [Prompts and design record](examples/03-vintage/character.json) |
 
-### Korean/Japanese-Inspired Social Portrait
+### Natural Daily Character Reference Sheet
 
-![Korean Japanese inspired character reference sheet, front side back views, six facial expressions, lavender knit top, ivory skirt and color palette](examples/02-social/character-sheet.png)
+![Natural daily character reference sheet, front side back views, six facial expressions, sage green overshirt, blue jeans and color palette](examples/01-natural/character-sheet.png)
 
 ### Vintage Character Reference Sheet
 

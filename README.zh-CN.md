@@ -14,7 +14,7 @@
 
 [快速开始](#快速开始) · [工作流程](#工作流程从人脸到角色设定表) · [效果示例](#效果示例三种风格) · [商用许可](#开源与商用)
 
-![自然日常角色设定表：成年虚构人物、正侧背三视图、六表情、服装细节与配色板](examples/01-natural/character-sheet.png)
+![Soft Social 日韩轻甜角色设定表：成年虚构人物、正侧背三视图、六表情、薰衣草色针织上衣、奶白半裙与配色板](examples/02-social/character-sheet.png)
 
 ## Persona Blueprint 是什么？
 
@@ -66,9 +66,9 @@ flowchart LR
 | 较宽的方圆轮廓、细长眼型；清爽日常妆。 | 短心形椭圆轮廓、开放眼型；桃粉妆与薄唇釉。 | 偏长脸、较明确颧鼻层次；适配复古唇妆。 |
 | [完整角色设定表](examples/01-natural/character-sheet.png) · [实际提示词与设计](examples/01-natural/character.json) | [完整角色设定表](examples/02-social/character-sheet.png) · [实际提示词与设计](examples/02-social/character.json) | [完整角色设定表](examples/03-vintage/character-sheet.png) · [实际提示词与设计](examples/03-vintage/character.json) |
 
-### 日韩轻修图
+### 自然日常
 
-![日韩轻修图角色设定表：三视图、六表情、薰衣草色针织上衣、奶白半裙与配色板](examples/02-social/character-sheet.png)
+![自然日常角色设定表：三视图、六表情、鼠尾草绿外套、蓝色牛仔裤与配色板](examples/01-natural/character-sheet.png)
 
 ### 复古风格
 
