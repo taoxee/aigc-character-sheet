@@ -14,7 +14,7 @@
 
 [快速开始](#快速开始) · [工作流程](#工作流程从人脸到角色设定表) · [效果示例](#效果示例三种风格) · [商用许可](#开源与商用)
 
-![Soft Social 日韩轻甜角色设定表：成年虚构人物、正侧背三视图、六表情、薰衣草色针织上衣、奶白半裙与配色板](examples/02-social/character-sheet.png)
+![米色针织角色设定表：金发成年人物、正侧背三视图、六表情、服装细节与配色板](examples/reference-outfits/06-beige-knit.png)
 
 ## Persona Blueprint 是什么？
 
@@ -75,6 +75,38 @@ flowchart LR
 ![复古写实角色设定表：藏青西装、正侧背三视图、六表情、服装细节与配色板](examples/03-vintage/character-sheet.png)
 
 原始人脸为 1122 × 1402，设定表为 1774 × 887。样例由内置图像工具生成，并经静态目视检查；难过与不满等克制表情的辨识度仍需结合用途判断。未知侧背和身体是设计补全，不能视为正面照片证实的真实结构。完整 prompt、参考输入关系与校验摘要见 [示例说明](references/public-examples.md)。
+
+## 人脸与服装参考搭配图库
+
+使用五张人脸参考搭配六套服装。金发人物分别演示黑色荷叶边裙与米色针织裙，米色针织造型作为项目主图。每张包含全身三视图、六表情、服装细节与配色板。
+
+### 碎花连衣裙
+
+![碎花连衣裙写实角色设定表：三视图、六表情与服装细节](examples/reference-outfits/01-floral.png)
+
+### 黑色 Polo 与米色短裙
+
+![黑色 Polo 与米色短裙写实角色设定表：三视图、六表情与服装细节](examples/reference-outfits/02-city.png)
+
+### 橙色吊带与蓝色喇叭裤
+
+![橙色吊带与蓝色喇叭裤写实角色设定表：三视图、六表情与服装细节](examples/reference-outfits/03-summer.png)
+
+### 金发黑色荷叶边裙
+
+![金发黑色荷叶边裙写实角色设定表：三视图、六表情与服装细节](examples/reference-outfits/04-black-ruffles.png)
+
+### 白色泡泡袖裙
+
+![白色泡泡袖裙写实角色设定表：三视图、六表情与服装细节](examples/reference-outfits/05-white.png)
+
+[米色针织造型主图](examples/reference-outfits/06-beige-knit.png) · [生成提示词与参考配对](examples/reference-outfits/README.md)
+
+这些图片基于实际参考输入生成，人脸相似度仍可能存在偏差；未展示的服装背面及身体比例为设计补全。
+
+### 日韩轻甜 · Soft Social
+
+![Soft Social 日韩轻甜角色设定表：三视图、六表情与配色板](examples/02-social/character-sheet.png)
 
 ## 快速开始
 

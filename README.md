@@ -14,7 +14,7 @@
 
 [Quick Start](#quick-start) · [Workflow](#workflow) · [Examples](#examples) · [Commercial Use](#license-and-commercial-use)
 
-![Soft Social character reference sheet: Korean Japanese inspired fictional adult character, front side back turnaround, six facial expressions, outfit details and color palette](examples/02-social/character-sheet.png)
+![Beige Knit character reference sheet: blonde adult character, front side back views, six facial expressions, knit outfit details and color palette](examples/reference-outfits/06-beige-knit.png)
 
 ## What Is a Persona Blueprint?
 
@@ -75,6 +75,38 @@ These three independent fictional adult women demonstrate natural daily, soft so
 ![Vintage realistic character model sheet with navy blazer, front side back turnaround, six expressions, garment details and coordinated color swatches](examples/03-vintage/character-sheet.png)
 
 Original portraits are 1122 × 1402 pixels; sheets are 1774 × 887 pixels. Examples were generated with the built-in image tool and visually reviewed as still images. Restrained sadness and annoyance may need closer review for your intended use. Unseen side, back, and body details are design additions, not anatomy established by the frontal portrait. See the [example notes](references/public-examples.md) for execution records, reference inputs, and review scope.
+
+## Reference Portraits × Outfit Gallery
+
+Five supplied identity portraits paired with six outfits. The blonde character appears in both Black Ruffles and Beige Knit; Beige Knit is the project cover. Each sheet includes three full-body views, six expressions, outfit details, and color swatches.
+
+### Floral Dress
+
+![Floral Dress realistic character reference sheet with three views and six expressions](examples/reference-outfits/01-floral.png)
+
+### City Polo
+
+![City Polo realistic character reference sheet with three views and six expressions](examples/reference-outfits/02-city.png)
+
+### Summer Color
+
+![Summer Color realistic character reference sheet with three views and six expressions](examples/reference-outfits/03-summer.png)
+
+### Black Ruffles
+
+![Black Ruffles realistic character reference sheet with three views and six expressions](examples/reference-outfits/04-black-ruffles.png)
+
+### Ivory Puff Sleeves
+
+![Ivory Puff Sleeves realistic character reference sheet with three views and six expressions](examples/reference-outfits/05-white.png)
+
+[Beige Knit — cover image](examples/reference-outfits/06-beige-knit.png) · [Generation prompts and input mapping](examples/reference-outfits/README.md)
+
+These are image-guided generations. Facial likeness may vary, and unseen garment backs and body proportions are design additions.
+
+### Soft Social Character Reference Sheet
+
+![Soft Social character reference sheet with three views, six expressions and a color palette](examples/02-social/character-sheet.png)
 
 ## Quick Start
 
